@@ -1,7 +1,7 @@
 ---
 name: "\U0001F433 Feature Request"
 about: Suggest an idea for this project
-title: ''
+title: "\U0001F433 [Feature Request] "
 labels: ''
 assignees: ''
 
