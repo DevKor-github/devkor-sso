@@ -7,10 +7,10 @@ assignees: ''
 
 ---
 
-## ✏️  Is your feature request related to a problem? Please describe.
+## ✏️  Feature 작업 사항 
 
+## 💡Description
 
-## 💡Describe the solution you'd like
+##  🗒 To do
 
-
-## Additional context
+## ETC
