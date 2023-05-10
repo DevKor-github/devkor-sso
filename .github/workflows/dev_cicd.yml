@@ -48,7 +48,7 @@ jobs:
         aws s3 cp \
         --region ap-northeast-2 \
         --acl private \
-        ./dev-build.zip s3://dev-build/
+        ./dev-build.zip s3://sso-code-bucket/
 
     - name: Deploy Code
       env:
