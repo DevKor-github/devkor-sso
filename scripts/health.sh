@@ -10,14 +10,22 @@ source "${ABSDIR}"/switch.sh
 
 IDLE_PORT=$(find_idle_port)
 
+if [ "${IDLE_PORT}" == 8080 ]
+then
+  CUR_PORT=8081
+else
+  CUR_PORT=8080
+fi
+
 echo "> Health Check Start!"
 echo "> IDLE_PORT: $IDLE_PORT"
-echo "> curl -s http://localhost:$IDLE_PORT/profile "
+echo "> CUR_PORT: $CUR_PORT"
+echo "> curl -s http://localhost:$CUR_PORT/profile "
 sleep 10
 
 for RETRY_COUNT in {1..10}
 do
-  RESPONSE=$(curl -s http://localhost:"${IDLE_PORT}"/profile)
+  RESPONSE=$(curl -s http://localhost:"${CUR_PORT}"/profile)
   UP_COUNT=$(echo "${RESPONSE}" | grep 'blue' | grep 'green' | wc -l)
 
   if [ "${UP_COUNT}" -ge 1 ]
