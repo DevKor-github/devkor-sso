@@ -25,6 +25,8 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+# application-blue.properties
+# application-green.properties
 
 ### NetBeans ###
 /nbproject/private/
