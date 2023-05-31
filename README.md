@@ -13,5 +13,5 @@ DevKor의 Single Sign On을 구축하기 위한 프로젝트입니다.
    * "feat" : 새로운 기능 추가
    * "docs" : 문서 수정
    * "refactor" : 코드 리펙토링
-   * chore : 빌드 작업, 패키지 관리자 구성 등 업데이트, Production Code 변경 없음
+   * "chore" : 빌드 작업, 패키지 관리자 구성 등 업데이트, Production Code 변경 없음
    * "test" : 테스트 코드 작성
