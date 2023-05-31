@@ -1,6 +1,7 @@
 package devkor.sso.domain.user;
 
 import devkor.sso.domain.user.dto.UserRequestDto;
+import devkor.sso.global.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +33,7 @@ public class UserService {
 
     protected Users registerUser(UserRequestDto requestDto) {
         if (getUserByEmail(requestDto.getKUPID_email()).isPresent()) {
-//            throw new (String.format("이미 등록된 KUPID 이메일입니다: email=%s", requestDto.getKUPID_email());
+            throw new BusinessException(String.format("이미 등록된 KUPID 이메일입니다: email=%s", requestDto.getKUPID_email()));
         }
         requestDto.encryptPassword(encoder.encode(requestDto.getPassword()));
         final var user = userRepository.save(requestDto.toEntity());
