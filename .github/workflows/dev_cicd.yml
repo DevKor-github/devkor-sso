@@ -34,10 +34,10 @@ jobs:
     - name: Make Directory for delivery
       run: mkdir deploy
       
-    - name: Copy appspec
+    - name: Copy appspec.yml
       run: cp appspec-dev.yml ./deploy/appspec.yml
     
-    - name: Copy Jar
+    - name: Copy jar file
       run: cp ./build/libs/*.jar ./deploy/
 
     - name: Copy Shell Scripts

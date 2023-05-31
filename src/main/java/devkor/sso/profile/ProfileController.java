@@ -12,11 +12,9 @@ import java.util.List;
 @RestController
 public class ProfileController {
     private final Environment env;
-
     @GetMapping("/profile")
     public String getProfile() {
         List<String> profiles = Arrays.asList(env.getActiveProfiles());
-
         List<String> deployProfiles = Arrays.asList("blue", "green");
         String defaultProfile = profiles.isEmpty() ? "default" : profiles.get(0);
 
